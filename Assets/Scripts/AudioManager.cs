@@ -5,10 +5,20 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    public static AudioManager instance;
    
     // On awake, add all audio sources from list
     void Awake()
     {
+        // Check if AudioManager already exists
+        if (instance == null) {
+            instance = this;
+        } else {
+            Destroy(gameObject);
+            return;
+        }
+        // Dont Destroy on Load so that audio persists between scenes
+        DontDestroyOnLoad(gameObject);
         foreach (Sound s in sounds)
         {
             // Create audio source on each sound from array and assign its values
@@ -18,6 +28,11 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+    }
+
+    void Start() 
+    {
+        Play("Theme");
     }
 
     // Play sound of given name 
