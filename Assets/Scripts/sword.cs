@@ -38,6 +38,9 @@ public class sword : MonoBehaviour
                 collider_rbody.velocity = new Vector3(player.transform.forward.x * block_knockBack, 0, player.transform.forward.z * block_knockBack);
                 player_rbody.velocity = new Vector3(-player.transform.forward.x * block_self_knockBack, 0, -player.transform.forward.z * block_self_knockBack);
             }else {
+                // Play sound with AudioManager
+                FindObjectOfType<AudioManager>().Play("PlayerHit");
+
                 Debug.Log("col notblock");
                 collider_rbody.velocity = new Vector3(player.transform.forward.x * knockBack, 0, player.transform.forward.z * knockBack);
             }
