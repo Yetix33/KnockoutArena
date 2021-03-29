@@ -26,6 +26,7 @@ public class Score : MonoBehaviour
             p2_score += 1;
             p2_scoreText.text = "Player 2: " + p2_score + " Knocks";
             SceneManager.LoadScene("scene1");
+
         }
         if(p2.position.y < -10){
             p1_score += 1;
