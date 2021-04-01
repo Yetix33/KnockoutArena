@@ -48,6 +48,7 @@ public class sword : MonoBehaviour
 
             if(col.gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("block")){
                 Debug.Log("col block");
+                FindObjectOfType<AudioManager>().Play("BlockHit");
                 collider_rbody.velocity = new Vector3(player.transform.forward.x * temp_block_knockBack, 0, player.transform.forward.z * temp_block_knockBack);
                 player_rbody.velocity = new Vector3(-player.transform.forward.x * block_self_knockBack, 0, -player.transform.forward.z * block_self_knockBack);
             }else {

@@ -169,7 +169,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &190838196
 PrefabInstance:
@@ -310,7 +310,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &276549592 stripped
 Transform:
@@ -355,7 +355,7 @@ Transform:
   - {fileID: 696019091}
   - {fileID: 276549592}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &482740650
 BoxCollider:
@@ -477,7 +477,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 28.743002, y: 0, z: 0}
 --- !u!1 &687260454
 GameObject:
@@ -516,10 +516,40 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Theme
-    clip: {fileID: 8300000, guid: 7240d9bcd427cd34f97f62c469daf796, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: f2f9d4b99a99b96429bdcdd20c8f4f00, type: 3}
+    volume: 0.073
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: GetPowerup
+    clip: {fileID: 8300000, guid: 5e9702e41baecae42b8f483e1f63a674, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BlockHit
+    clip: {fileID: 8300000, guid: e4ca3d1b43cbddf4a894ccd98a4cadff, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 4b3bf7d07c9c14443b087ce6277f8a24, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordSwingP1
+    clip: {fileID: 8300000, guid: 763be524bc1e8da41a489b7a35a403a5, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordSwingP2
+    clip: {fileID: 8300000, guid: 763be524bc1e8da41a489b7a35a403a5, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &687260456
 Transform:
@@ -533,7 +563,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &696019091 stripped
 Transform:
@@ -789,7 +819,7 @@ RectTransform:
   - {fileID: 1485278729}
   - {fileID: 1613649669}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -967,7 +997,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1485278728
 GameObject:
@@ -1429,7 +1459,7 @@ PrefabInstance:
     - target: {fileID: 797566469624011795, guid: cb75931c6ef456949bc51b23b3860bfa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 797566469624011795, guid: cb75931c6ef456949bc51b23b3860bfa,
         type: 3}
@@ -1519,7 +1549,7 @@ PrefabInstance:
     - target: {fileID: 2049525774896625505, guid: 6d9e8b0d28bb4444c88b4c90b133e20a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2049525774896625505, guid: 6d9e8b0d28bb4444c88b4c90b133e20a,
         type: 3}
