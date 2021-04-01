@@ -3,15 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Powerups : MonoBehaviour
+public class PowerupManager : MonoBehaviour
 {
     private int start = 0;
     private bool TakingTime;
     private int time;
 
     private int rangeStart = 5;
-    private int rangeEnd = 15;
-    private int powerupTime;
+    private int rangeEnd = 10;
     private System.Random randomizer;
     private int TimeOfNextPowerup;
     private bool livePowerup;
@@ -51,6 +50,10 @@ public class Powerups : MonoBehaviour
     private int findNextPowerupTime() {
         int randTime = randomizer.Next(rangeStart, rangeEnd + 1);
         return time + randTime;
+    }
+    public void resetPowerupTime(){
+        livePowerup = false;
+        TimeOfNextPowerup = findNextPowerupTime();
     }
 
     private void AddPowerup() {

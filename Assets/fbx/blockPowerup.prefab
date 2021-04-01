@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7404396935057607404}
   - component: {fileID: 4694233510264274470}
   - component: {fileID: 6261359318843081896}
+  - component: {fileID: 7506252512148407507}
   m_Layer: 0
   m_Name: blockPowerup
   m_TagString: Untagged
@@ -89,9 +90,21 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6495801385440174067}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5625691847015702129, guid: cfb8f0ddfd5b6eb489e6b6a093106a31, type: 3}
+--- !u!114 &7506252512148407507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6495801385440174067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4bdec50294ab3844b95a3817d3d7b27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
