@@ -8,7 +8,9 @@ public class Player2Controller : MonoBehaviour
     public Rigidbody r_body;
     private Vector3 _inputs = Vector3.zero;
     private Animator animator;
-    private bool isKnockback = false; 
+    private bool isKnockback = false;
+    private bool isSpeedUp = false; 
+    public bool isBlockUp = false; 
     // Start is called before the first frame update
     void Start()
     {
@@ -50,5 +52,33 @@ public class Player2Controller : MonoBehaviour
         if(col.name == "sword"){
             isKnockback = true;
         }
-}
+    }
+    IEnumerator SpeedUp(){
+        float old_speed = speed;
+        speed = speed * 1.5f;
+        isSpeedUp = true;
+        yield return new WaitForSeconds(5f);
+        speed = old_speed;
+        isSpeedUp = false;
+    }
+
+    public void startSpeedUp() {
+        if(isSpeedUp){
+            StopCoroutine(SpeedUp());
+        }
+        StartCoroutine(SpeedUp());
+    }
+
+    IEnumerator BlockUp(){
+        isBlockUp = true;
+        yield return new WaitForSeconds(5f);
+        isBlockUp = false;
+    }
+
+    public void startBlockUp() {
+        if(isBlockUp){
+            StopCoroutine(BlockUp());
+        }
+        StartCoroutine(BlockUp());
+    }
 }
