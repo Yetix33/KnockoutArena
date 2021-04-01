@@ -10,6 +10,7 @@ public class powerup : MonoBehaviour
         Debug.Log(col.gameObject.tag);
         if(col.gameObject.tag == "Player"){
             Debug.Log("this is a player");
+            FindObjectOfType<AudioManager>().Play("GetPowerup");
             switch(this.gameObject.name){
                 case "swordPowerup(Clone)":
                     Debug.Log("collected sword powerup");

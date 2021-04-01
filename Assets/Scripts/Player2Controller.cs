@@ -42,6 +42,8 @@ public class Player2Controller : MonoBehaviour
 
         if(Input.GetButtonDown("p2_base_attack")&& !isKnockback){
             animator.SetTrigger("base_attack");
+            FindObjectOfType<AudioManager>().Play("SwordSwingP2");
+
         }
         if(r_body.velocity.magnitude <1){
             isKnockback = false;

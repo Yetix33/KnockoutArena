@@ -22,13 +22,18 @@ public class Score : MonoBehaviour
 
     void Update()
     {
+        if(p1.position.y < -5 || p2.position.y < -5){
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
+        }
         if(p1.position.y < -10){
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
             p2_score += 1;
             p2_scoreText.text = "Player 2: " + p2_score + " Knocks";
             SceneManager.LoadScene("scene1");
 
         }
         if(p2.position.y < -10){
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
             p1_score += 1;
             p1_scoreText.text = "Player 1: " + p1_score + " Knocks";
             SceneManager.LoadScene("scene1");
