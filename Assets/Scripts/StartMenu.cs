@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     public void PlayGame () {
-        SceneManager.LoadScene("scene1");
+        int nextScene = Random.Range(1,10);
+        SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+
     }
     public void ExitGame () {
         Debug.Log("Quit");
