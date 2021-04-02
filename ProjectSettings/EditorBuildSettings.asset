@@ -6,9 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
+    path: Assets/Scenes/winner(test).unity
     guid: aea46f13484419647aeb76936f06ced5
   - enabled: 1
     path: Assets/Scenes/scene1.unity
     guid: 5f888da2e337eda48a5c954870810557
+  - enabled: 1
+    path: Assets/Scenes/scene2.unity
+    guid: bc6dfbe5d1721624a88c9838d96932dc
+  - enabled: 1
+    path: Assets/Scenes/scene3.unity
+    guid: b624dd00003bcb848a00f986f69cee30
+  - enabled: 1
+    path: Assets/Scenes/scene4.unity
+    guid: 280537377689a5c469c9cc1f946fbcad
+  - enabled: 1
+    path: Assets/Scenes/scene5.unity
+    guid: fdc1de15f306ba3468896f05409293e8
+  - enabled: 1
+    path: Assets/Scenes/scene6.unity
+    guid: 83b1156e5d488a1459a6aad3226f771e
+  - enabled: 1
+    path: Assets/Scenes/scene7.unity
+    guid: e32f6b97ce2df0a48b99c427fcbfc153
+  - enabled: 1
+    path: Assets/Scenes/scene8.unity
+    guid: 7b8613c9122801e479926770d4a8e140
+  - enabled: 1
+    path: Assets/Scenes/scene9.unity
+    guid: 470d1b4c311a2514ab2b0e55d3a6eb52
+  - enabled: 1
+    path: Assets/Scenes/scene10.unity
+    guid: f5d0fe61530ab06419bf8c4fd02ac669
   m_configObjects: {}
