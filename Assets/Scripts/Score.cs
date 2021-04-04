@@ -12,6 +12,9 @@ public class Score : MonoBehaviour
     public Text p2_scoreText;
     public static float p1_score;
     public static float p2_score;
+
+    public int winningScore = 5;
+
     void Start()
     {
    
@@ -28,17 +31,27 @@ public class Score : MonoBehaviour
         if(p1.position.y < -10){
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
             p2_score += 1;
-            p2_scoreText.text = "Player 2: " + p2_score + " Knocks";
-            int nextScene = Random.Range(1,10);
-            SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
-
+            if (p2_score == winningScore) {
+                Debug.Log("Player 2 is the winner!");
+                SceneManager.LoadScene("StartMenu");
+            } else {
+                p2_scoreText.text = "Player 2: " + p2_score + " Knocks";
+                int nextScene = Random.Range(1,10);
+                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+            }
         }
         if(p2.position.y < -10){
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
             p1_score += 1;
-            p1_scoreText.text = "Player 1: " + p1_score + " Knocks";
-            int nextScene = Random.Range(1,10);
-            SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+            if (p1_score == winningScore) {
+                Debug.Log("Player 1 is the winner!");
+                SceneManager.LoadScene("StartMenu");
+            } else {
+                p1_scoreText.text = "Player 1: " + p1_score + " Knocks";
+                int nextScene = Random.Range(1,10);
+                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+            }
+
 
         }
     }
