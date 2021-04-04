@@ -813,6 +813,7 @@ MonoBehaviour:
   p2: {fileID: 1668526157304629306}
   p1_scoreText: {fileID: 1485278730}
   p2_scoreText: {fileID: 1613649670}
+  winningScore: 5
 --- !u!114 &1094749504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1648,6 +1649,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2725371242557014804, guid: 09d7a53cedfba5b4aa1b14c840460cff,
+        type: 3}
+      propertyPath: scoreObject
+      value: 
+      objectReference: {fileID: 1094749502}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09d7a53cedfba5b4aa1b14c840460cff, type: 3}
 --- !u!4 &1668526157304629306 stripped
