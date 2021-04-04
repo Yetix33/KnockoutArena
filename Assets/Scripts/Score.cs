@@ -13,7 +13,7 @@ public class Score : MonoBehaviour
     public static float p1_score;
     public static float p2_score;
 
-    public int winningScore = 5;
+    private static int winningScore = 7;
 
     void Start()
     {
@@ -32,6 +32,7 @@ public class Score : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
             p2_score += 1;
             if (p2_score == winningScore) {
+                ResetScore();
                 Debug.Log("Player 2 is the winner!");
                 SceneManager.LoadScene("StartMenu");
             } else {
@@ -44,6 +45,7 @@ public class Score : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
             p1_score += 1;
             if (p1_score == winningScore) {
+                ResetScore();
                 Debug.Log("Player 1 is the winner!");
                 SceneManager.LoadScene("StartMenu");
             } else {
